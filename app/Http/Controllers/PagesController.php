@@ -9,4 +9,13 @@ class PagesController extends Controller
     public function index(){
         return view('pages.index');
     }
+
+    public function myAdvert(){
+        return view('pages.myAdvert');
+    }
+
+    public function about(){
+        return view('pages.about');
+    }
+
 }
