@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post; //Saņemam posts modeli
 
 class PostsController extends Controller
 {
@@ -13,7 +14,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all(); //Saņem visus datus no modeļa. Ieliek tos mainīgajā
+        return view('posts.index')->with('posts', $posts); //Ieliek mainīgo $posts skatā
     }
 
     /**
